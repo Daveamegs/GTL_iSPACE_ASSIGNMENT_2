@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Assignment</title>
+    <style>
+        #display-screen {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            border: 1.5em solid #ddd;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: rgba(124, 152, 209, 0.6);
+            background-color: #7c98d1;
+        }
+
+        .display-screen {
+            position: relative;
+            width: 90%;
+            margin: 10px auto;
+            background-color: #3060be;
+            color: #fff;
+            padding: 3%;
+            z-index: 2;
+        }
+
+        .btn-get-date {
+            width: 50%;
+            font-size: 1.5em;
+            padding: 5px;
+            margin-top: 5%;
+            margin-bottom: 2%;
+            background-color: #3060be;
+            color: #fff;
+            border: #fff;
+        }
+
+        #before-click {
+            margin-bottom: 2.8em;
+        }
+
+        #show-date {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display-screen">
+        <div class="display-screen">
+            <h1 id="before-click">Before Button is Click</h1>
+
+            <div id="show-date">
+                <h2 id="display-date">Please click the Button</h2>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn-get-date" id="btn-get-date">Get Date</button>
+        </div>
+    </div>
+    <script>
+        var displayDate = document.getElementById("display-date")
+        var btnGetDate = document.getElementById("btn-get-date")
+
+        btnGetDate.onclick = function () {
+            var txtAfterClick = document.getElementById("before-click")
+            displayDate.innerHTML = new Date()
+            txtAfterClick.innerHTML = "After Button is Clicked"
+        }
+    </script>
+</body>
+
+</html>
